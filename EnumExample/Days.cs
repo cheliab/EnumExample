@@ -1,5 +1,7 @@
 ﻿namespace EnumExample
 {
+    // Простое перечисление
+    
     /// <summary>
     /// Дни недели
     /// </summary>

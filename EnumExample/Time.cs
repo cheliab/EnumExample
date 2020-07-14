@@ -1,5 +1,7 @@
 ﻿namespace EnumExample
 {
+    // Явно указываем тип для перечисления
+    
     /// <summary>
     /// Время дня
     /// </summary>
