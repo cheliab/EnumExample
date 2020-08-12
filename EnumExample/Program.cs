@@ -20,14 +20,17 @@ namespace EnumExample
             string identityValue = "";
             foreach(var field in type.GetFields())
             {
-                var attribute = field.GetCustomAttribute<IdentityValueAttribute>();
-
-                if (attribute == null)
+                if (bank.ToString() == field.Name)
                 {
-                    throw new NullReferenceException("Не удалось получить атрибут и его значение");
-                }
+                    var attribute = field.GetCustomAttribute<IdentityValueAttribute>();
 
-                identityValue = attribute.Value;
+                    if (attribute == null)
+                    {
+                        throw new NullReferenceException("Не удалось получить атрибут и его значение");
+                    }
+
+                    identityValue = attribute.Value;
+                }
             }
 
             return identityValue;
@@ -35,7 +38,9 @@ namespace EnumExample
         
         static void Main(string[] args)
         {
-            
+            string identityValueSberbank = GetIdentityValue(Banks.Sberbank);
+
+            Console.WriteLine(identityValueSberbank);
             
             Console.ReadLine();
         }
