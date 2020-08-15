@@ -42,6 +42,10 @@ namespace EnumExample
 
             Console.WriteLine(identityValueSberbank);
             
+            Console.WriteLine(new string('-', 20));
+            
+            FlagsEnumExample.Run();
+            
             Console.ReadLine();
         }
     }
